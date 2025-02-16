@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Akira+Expanded&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bradley+Hand+ITC&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Mistral&display=swap');
+        
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+        
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(45deg, #4f4e4e, #000000);
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 2s ease-in-out;
+            overflow-x: hidden;
+        }
+
+        .container {
+            margin: 50px auto;
+            padding: 40px;
+            background: rgba(0, 255, 234, 0.629);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 80%;
+        }
+
+        h1 {
+            color: #0a7497;
+            font-size: 40px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .image-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .text-box {
+            width: 30%;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            font-size: 25px;
+            color: black;
+            font-family: 'Bradley Hand ITC', cursive;
+            background: rgb(255, 255, 255);
+        }
+
+        .image-container {
+            position: relative;
+            text-align: center;
+            cursor: pointer;
+            display: inline-block;
+            margin: 20px;
+        }
+
+        .image-container img {
+            width: 250px;
+            height: auto;
+            border-radius: 15px;
+            border: 5px solid #03cccc;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container.clicked img {
+            transform: scale(1.5);
+        }
+
+        .love-text {
+            position: absolute;
+            bottom: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 35px;
+            font-family: 'Mistral', cursive;
+            color: #a200ff;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .image-container.clicked .love-text {
+            opacity: 1;
+        }
+        @keyframes floatUp {
+            0% { transform: translateY(100px); opacity: 0; }
+            100% { transform: translateY(-100px); opacity: 1; }
+        }
+
+        .balloon {
+            position: absolute;
+            bottom: 0;
+            width: 50px;
+            height: 70px;
+            background: rgb(251, 7, 198);
+            border-radius: 50%;
+            animation: floatUp 10s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> Happy Birthday KISSIKA</h1>
+
+        <div class="image-box">
+            <div class="text-box">I Love You a lot itna ki express bhi nhi kr skta aur har din ye pyaar badhta hi jarha h kyuki h hi tu itni acchi aur ekdum bestest for me</div>
+            <div class="image-container" onclick="toggleImage(this, 'audio1')">
+                <img src="c:\mu\b\IMG_20250126_233138_928.jpg" alt="Birthday Celebration">
+                <div class="love-text">I Love You ❤️</div>
+            </div>
+        </div>
+
+        <div class="image-box">
+            <div class="image-container" onclick="toggleImage(this, 'audio2')">
+                <img src="WhatsApp Image 2025-02-06 at 16.24.21_45207d91.jpg" alt="Birthday Fun">
+                <div class="love-text">I Love You ❤️</div>
+            </div>
+            <div class="text-box">Always thinking about you and you only , terese thodi der baat krke mera din banjata hai to samajhle bilkul pagal krdia h tune mujhe </div>
+        </div>
+
+        <div class="image-box">
+            <div class="text-box">I promise to love you everyday everyminute everysecond aur aise hi pyaar krta rhunga bs kabhi chorna nhi </div>
+            <div class="image-container" onclick="toggleImage(this, 'audio3')">
+                <img src="c:\mu\b\IMG_20250126_233055_688.jpg" alt="Cake Cutting">
+                <div class="love-text">I Love You ❤️</div>
+            </div>
+        </div>
+
+        <div class="image-box">
+            <div class="image-container" onclick="toggleImage(this, 'audio4')">
+                <img src="c:\mu\b\IMG_20250126_233114_591.jpg" alt="Surprise Gift">
+                <div class="love-text">I Love You ❤️</div>
+            </div>
+            <div class="text-box">You deserve to be loved aur jitna deserve krti h usse jada pyaar krna chahta hu tujhe aur hamesha krunga </div>
+        </div>
+
+        <div class="image-box">
+            <div class="text-box">once again HAPPY BIRTHDAY CUTIE and I LOVE YOU my Aloo Tikki</div>
+            <div class="image-container" onclick="toggleImage(this, 'audio5')">
+                <img src="c:\mu\b\IMG_20250126_233449_243.jpg" alt="Special Memory">
+                <div class="love-text">I Love You ❤️</div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio1" src="c:\mu\0125(1).MP3"></audio>
+    <audio id="audio2" src="c:\mu\0125.MP3"></audio>
+    <audio id="audio3" src="c:\mu\O mere dil ke chain (1).m4a"></audio>
+    <audio id="audio4" src="c:\mu\tu jaane na (1).m4a"></audio>
+    <audio id="audio5" src="c:\mu\ye raatein ye mausam nadi ka kinara (1).m4a"></audio>
+
+    <script>
+        function toggleImage(element, audioId) {
+            const audio = document.getElementById(audioId);
+            if (element.classList.contains("clicked")) {
+                element.classList.remove("clicked");
+                audio.pause();
+                audio.currentTime = 0;
+            } else {
+                document.querySelectorAll('.image-container').forEach(img => img.classList.remove('clicked'));
+                document.querySelectorAll('audio').forEach(aud => {
+                    aud.pause();
+                    aud.currentTime = 0;
+                });
+                element.classList.add("clicked");
+                audio.play();
+                launchBalloons();
+            }
+        }
+
+        function launchBalloons() {
+            for (let i = 0; i < 20; i++) {
+                const balloon = document.createElement('div');
+                balloon.classList.add('balloon');
+                balloon.style.left = `${Math.random() * 100}vw`;
+                balloon.style.background = getRandomColor();
+                balloon.style.animationDuration = `${Math.random() * 2 + 2}s`;
+                document.body.appendChild(balloon);
+                setTimeout(() => balloon.remove(), 4000);
+            }
+        }
+
+        function getRandomColor() {
+            const colors = ['red', 'blue', 'yellow', 'green', 'purple', 'orange', 'pink'];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+    </script>
+</body>
+</html>
